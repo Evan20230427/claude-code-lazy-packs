@@ -2,7 +2,7 @@
 title: 'Claude Code 懶人包 #03：建立第二大腦（Obsidian）'
 date: '2026-04-04'
 type: 懶人包
-version: v0.5
+version: v0.6
 status: 實測修正版
 tags:
   - Claude-Code
@@ -14,8 +14,8 @@ video: EP06
 ---
 # Claude Code 懶人包 #03：建立第二大腦（Obsidian）
 
-> 版本：v0.5
-> 更新日期：2026-04-06
+> 版本：v0.6
+> 更新日期：2026-05-20
 > 對應影片：Claude基本功 EP06
 
 > 📌 **本懶人包可獨立執行**：會自動檢查並安裝所需工具，不需要先看過其他懶人包。你只要確認下方「先備條件」即可開始。
@@ -37,6 +37,7 @@ video: EP06
 
 - [ ] Claude Code 桌面版已安裝且能正常使用（Pro 方案以上）
 - [ ] 已有 Google 帳號（用於 Google Drive 同步）
+- [ ] 若無法安裝 Google Drive，可改用 OneDrive（見下方「同步方案說明」與 OneDrive 版本懶人包）
 - [ ] 電腦有網路連線
 - [ ] Node.js 已安裝（mcpvault 需要 npx 指令）— 沒裝也沒關係，步驟零會自動安裝
 
@@ -78,6 +79,7 @@ video: EP06
    - Windows：確認 `G:\` 或 `C:\Users\[使用者]\Google Drive\` 路徑是否存在
    - macOS：確認 `/Users/[使用者]/Google Drive/` 或 `~/Library/CloudStorage/GoogleDrive-*/` 路徑是否存在
    - 如果沒有安裝 Google Drive 桌面版，告知使用者需要先安裝
+   - **若無法安裝 Google Drive，改用 OneDrive（見下方「同步方案說明」或 OneDrive 版懶人包）**
 6. **檢查 Obsidian 是否已安裝**：嘗試確認 Obsidian 的安裝路徑
 
 > 全部通過後，告知使用者環境狀態。
@@ -125,6 +127,8 @@ Google Drive 桌面版會在你的電腦上建立一個同步資料夾，Obsidia
 > 10. 等待同步完成（系統匣的雲朵圖示顯示 ✅ 打勾）
 >
 > 確認能看到 Google Drive 資料夾後，告訴 Claude「完成了」即可繼續。
+
+> ❗ **如果無法安裝 Google Drive**：請改用 OneDrive，同步流程請參考 OneDrive 版本懶人包 `03-建立第二大腦-Obsidian-OneDrive.md`。
 
 ---
 
@@ -371,6 +375,7 @@ claude mcp remove obsidian
 | 方案 | 差異 |
 |------|------|
 | **Google Drive**（本懶人包預設） | vault 建在 Google Drive 資料夾內即可 |
+| **OneDrive**（替代方案） | vault 建在 OneDrive 資料夾內即可，完整步驟請見 OneDrive 版懶人包 |
 | **Obsidian Sync**（付費 $4/月） | vault 建在任意位置，Obsidian 內設定同步 |
 | **iCloud**（macOS / iOS） | vault 建在 iCloud Drive 資料夾內 |
 
@@ -386,7 +391,8 @@ claude mcp remove obsidian
 | 2026-04-04 | v0.2 | 加入環境檢查、復原機制、跨平台支援、Google Drive 同步方案 |
 | 2026-04-06 | v0.3 | 移除 obsidian-ide（obsidian-claude-code-mcp），mcpvault 已涵蓋所需功能 |
 | 2026-04-06 | v0.4 | 補充 Google Drive 桌面版完整安裝教學、修正步驟編號 |
-| 2026-04-06 | v0.5 | 實測修正：步驟五改為全域安裝 + 手動寫設定檔（解決桌面版無 CLI、npx PATH 問題），三處設定確保一次重啟就成功，補充 Windows 踩坑常見問題 |
+| 2026-04-06 | v0.5 | 實測修正：步驟五改為全域安裝 + 手動寫設定檔（解決桌面版無 CLI、npx PATH 問題），三處設定確保一次重啟就成功，補充 Windows 踩坑常[...] |
+| 2026-05-20 | v0.6 | 補充 OneDrive 替代方案與連結 OneDrive 版懶人包 |
 
 ---
 
